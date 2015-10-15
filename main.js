@@ -1,7 +1,7 @@
 var content = ( function() {
   var c = {};
 
-  var LIMIT_BOOKS = 5;
+  var LIMIT_BOOKS = 6;
   var inventaireData;
 
   function getRandomTitleFromSitelinks( sitelinks ) {
@@ -24,13 +24,15 @@ var content = ( function() {
   }
 
   function showBooks( books, correctBook ) {
-    var keys = Object.keys( books );
+    var keys = Object.keys( books ),
+        book;
+
     keys.sort( function() { return 0.5 - Math.random() } );
     keys = keys.slice( 0, LIMIT_BOOKS );
 
-    if ( !$.inArray( correctBook, keys) ) {
-      keys = keys.slice( 0, LIMIT_BOOKS - 1 );
-      keys.push( correctBook );
+    if ( $.inArray( correctBook, keys) == -1 ) {
+      keys.pop();
+      keys.push( "wd:" + correctBook );
       keys.sort( function() { return 0.5 - Math.random() } );
     }
 
@@ -38,19 +40,52 @@ var content = ( function() {
       if ( !keys[ i ] ) {
         continue;
       }
+      
+      var title = books[ keys[ i ] ][ 0 ];
+      var image = books[ keys[ i ] ][ 1 ];
+      var imageHtml;
 
-        title = books[ keys[ i ] ][ 0 ];
-        image = books[ keys[ i ] ][ 1 ];
-        if ( image.length > 0 ) {
-          $(".books").append(
-            '<div class="col-sm-4 book"><h3>' + title + '</h3><img src="' + image + '" alt="no bookcover found" height="200"></div>'
-          );
-        } else {
-          $(".books").append(
-            '<div class="col-sm-4 book-without-image"><h3>' + title + '</h3></div>'
-          );
-        }
+      if ( image.length > 0 ) {
+        imageHtml = $('<img/>', {
+          src   : image,
+          alt   : 'Bookcover',
+          height: '200',
+          id    : keys[ i ].substring( 3 ),
+          on    : {
+            click : function() {
+              clickOnBook( this.id, correctBook );
+            }
+          }
+        });
+
+      } else {
+        imageHtml = $('<img/>', {
+          src   : 'https://placekitten.com/g/150/200',
+          alt   : 'Bookcover',
+          height: '200',
+          id    : keys[ i ].substring( 3 ),
+          on    : {
+            click : function() {
+              clickOnBook( this.id, correctBook );
+            }
+          }
+        });
+      }
+
+      book = $( '<div class="col-sm-4 book"></div>' );
+      var titleHtml = $( '<h3>' + title + '</h3>' );
+      $('.books').append( book );
+      book.append( titleHtml );
+      book.append( imageHtml );
     }
+  }
+
+  clickOnBook = function( entityId, correctBook ) {
+    if ( entityId === correctBook ) {
+      alert("you won!");
+      c.init();
+    }
+    alert( entityId + " --> " + correctBook );
   }
 
   function showContent( entityIds, books ) {

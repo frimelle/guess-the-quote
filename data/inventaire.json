@@ -1,0 +1,361 @@
+[
+    {
+        "title": "The Stranger",
+        "entity": "wd:Q163297",
+        "transaction": "giving",
+        "listing": "friends",
+        "pictures": [
+            "https://upload.wikimedia.org/wikipedia/commons/6/64/Camus23.jpg"
+        ],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444926212577,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1f5c47",
+        "_rev": "2-592a824e69c613a661e14e0a152a23de",
+        "details": "",
+        "notes": "",
+        "updated": 1444926215452
+    },
+    {
+        "title": "The Great Gatsby",
+        "entity": "wd:Q214371",
+        "transaction": "giving",
+        "listing": "friends",
+        "pictures": [],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444926181428,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1f5600",
+        "_rev": "2-67f3d8ee88fc30bbde1c33a77a9528b0",
+        "details": "",
+        "notes": "",
+        "updated": 1444926184410
+    },
+    {
+        "title": "The Picture of Dorian Gray",
+        "entity": "isbn:9780141199498",
+        "transaction": "giving",
+        "listing": "friends",
+        "pictures": [
+            "http://books.google.com/books/content?id=zSdZr4L4yEoC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "http://books.google.com/books/content?id=zSdZr4L4yEoC&printsec=frontcover&img=1&zoom=2&source=gbs_api"
+        ],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444926148331,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1f4f84",
+        "_rev": "2-795220e6bdad2ac28fea5d351f13dd93",
+        "details": "",
+        "notes": "",
+        "updated": 1444926153208
+    },
+    {
+        "title": "The Catcher in the Rye",
+        "entity": "wd:Q183883",
+        "transaction": "giving",
+        "listing": "friends",
+        "pictures": [
+            "https://upload.wikimedia.org/wikipedia/commons/8/8e/Catcher-in-the-rye-red-cover.jpg"
+        ],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444926107149,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1f4b11",
+        "_rev": "2-68ab36e1be44786bbbd6eb92520a4b48",
+        "details": "",
+        "notes": "",
+        "updated": 1444926110846
+    },
+    {
+        "title": "Little Women",
+        "entity": "isbn:9781631824265",
+        "transaction": "giving",
+        "listing": "friends",
+        "pictures": [
+            "http://books.google.com/books/content?id=XDXJoAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "http://books.google.com/books/content?id=XDXJoAEACAAJ&printsec=frontcover&img=1&zoom=2&source=gbs_api"
+        ],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444926087890,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1f4533",
+        "_rev": "2-3e3451f04448d43fdaa8f3f053ed2147",
+        "details": "",
+        "notes": "",
+        "updated": 1444926091836
+    },
+    {
+        "title": "The Count of Monte Cristo",
+        "entity": "wd:Q191838",
+        "transaction": "giving",
+        "listing": "friends",
+        "pictures": [
+            "https://upload.wikimedia.org/wikipedia/commons/d/d6/Louis_Fran%C3%A7ais-Dant%C3%A8s_sur_son_rocher.jpg"
+        ],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444925980068,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1f37dd",
+        "_rev": "2-6689f83ad83191cf14bd986016a53404",
+        "details": "",
+        "notes": "",
+        "updated": 1444925984126
+    },
+    {
+        "title": "Don Quixote",
+        "entity": "isbn:9781853267956",
+        "transaction": "giving",
+        "listing": "friends",
+        "pictures": [
+            "http://books.google.com/books/content?id=FICLzcp22b8C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "http://books.google.com/books/content?id=FICLzcp22b8C&printsec=frontcover&img=1&zoom=2&source=gbs_api"
+        ],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444925841119,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1f361a",
+        "_rev": "2-51e98bdbde49c57a18180dbd95f7a211",
+        "details": "",
+        "notes": "",
+        "updated": 1444925843933
+    },
+    {
+        "title": "The Second Sex",
+        "entity": "wd:Q470098",
+        "transaction": "giving",
+        "listing": "friends",
+        "pictures": [],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444925805632,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1f2a77",
+        "_rev": "2-46656339d7bb30fb2980e9ab6e95159b",
+        "details": "",
+        "notes": "",
+        "updated": 1444925808580
+    },
+    {
+        "title": "Faust",
+        "entity": "isbn:9781840221152",
+        "transaction": "giving",
+        "listing": "friends",
+        "pictures": [
+            "http://books.google.com/books/content?id=GEfHKa3zj6YC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "http://books.google.com/books/content?id=GEfHKa3zj6YC&printsec=frontcover&img=1&zoom=2&source=gbs_api"
+        ],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444925733134,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1f1c45",
+        "_rev": "2-bc53ce965e30bd2489ce3598dfb4938c",
+        "details": "",
+        "notes": "",
+        "updated": 1444925737102
+    },
+    {
+        "title": "Harry Potter and the Goblet of Fire",
+        "entity": "wd:Q46751",
+        "transaction": "giving",
+        "listing": "friends",
+        "pictures": [
+            "http://books.google.com/books/content?id=fqgHogEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        ],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444925711246,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1f1a41",
+        "_rev": "2-7758509bbd1acd668e5d2f6b0406875a",
+        "details": "",
+        "notes": "",
+        "updated": 1444925714082
+    },
+    {
+        "title": "Harry Potter and the Half-Blood Prince",
+        "entity": "wd:Q46887",
+        "transaction": "giving",
+        "listing": "friends",
+        "pictures": [],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444925685427,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1f18bf",
+        "_rev": "2-553f7f87d60be481f8d2855858642dc3",
+        "details": "",
+        "notes": "",
+        "updated": 1444925688454
+    },
+    {
+        "title": "Through the Looking-Glass",
+        "entity": "isbn:9780486111254",
+        "transaction": "giving",
+        "listing": "friends",
+        "pictures": [
+            "http://books.google.com/books/content?id=M5jDAgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "http://books.google.com/books/content?id=M5jDAgAAQBAJ&printsec=frontcover&img=1&zoom=2&source=gbs_api"
+        ],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444925651337,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1f0adb",
+        "_rev": "3-73bd35d09f5af844bc749dd7dec788e8",
+        "updated": 1444925655551,
+        "details": "",
+        "notes": ""
+    },
+    {
+        "title": "Turkey Unveiled",
+        "entity": "isbn:9781590206904",
+        "transaction": "giving",
+        "listing": "public",
+        "pictures": [
+            "http://books.google.com/books/content?id=i_dgzgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "http://books.google.com/books/content?id=i_dgzgAACAAJ&printsec=frontcover&img=1&zoom=2&source=gbs_api"
+        ],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444925627633,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1f03b8",
+        "_rev": "2-f5059e1aafe0f10c2950f32b89963caa",
+        "details": "",
+        "notes": "",
+        "updated": 1444925630428
+    },
+    {
+        "title": "Open Advice",
+        "entity": "wd:Q19676897",
+        "transaction": "giving",
+        "listing": "public",
+        "pictures": [],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444925585952,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1f01ad",
+        "_rev": "3-fe630ad5a65c09b72821b9571f75236b",
+        "updated": 1444925594881,
+        "details": "",
+        "notes": ""
+    },
+    {
+        "title": "The Psychopathology of Everyday Life",
+        "entity": "wd:Q27592",
+        "transaction": "giving",
+        "listing": "friends",
+        "pictures": [],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444925564784,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1ef6ba",
+        "_rev": "2-6fa5f0ff19399f36f5771e029cafe920",
+        "details": "",
+        "notes": "",
+        "updated": 1444925567624
+    },
+    {
+        "title": "Animal Farm",
+        "entity": "wd:Q1396889",
+        "transaction": "giving",
+        "listing": "friends",
+        "pictures": [
+            "https://upload.wikimedia.org/wikipedia/commons/f/fb/Animal_Farm_-_1st_edition.jpg"
+        ],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444925506802,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1ef4cf",
+        "_rev": "2-cb4ff6b8d84339115b06d90600f4de88",
+        "details": "",
+        "notes": "",
+        "updated": 1444925509695
+    },
+    {
+        "title": "The Mayor of Castro Street",
+        "entity": "isbn:9780312019006",
+        "transaction": "giving",
+        "listing": "friends",
+        "pictures": [
+            "http://books.google.com/books/content?id=4a1kGmwXn3IC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "http://books.google.com/books/content?id=4a1kGmwXn3IC&printsec=frontcover&img=1&zoom=2&source=gbs_api"
+        ],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444925488942,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1ef1b6",
+        "_rev": "2-44b9c8d7188a6188276d102efbfdd563",
+        "details": "",
+        "notes": "",
+        "updated": 1444925491780
+    },
+    {
+        "title": "Istanbul: Memories and the City",
+        "entity": "wd:Q557511",
+        "transaction": "giving",
+        "listing": "friends",
+        "pictures": [],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444925449679,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1ee58f",
+        "_rev": "2-b6f17f3fcb1a4434b04b201565cacb04",
+        "details": "",
+        "notes": "",
+        "updated": 1444925452765
+    },
+    {
+        "title": "The Amazing Mr. Doolittle",
+        "entity": "isbn:9780405037788",
+        "transaction": "giving",
+        "listing": "friends",
+        "pictures": [],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444925416660,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1ee16a",
+        "_rev": "2-62800fc1d89344cea35707f891c8a752",
+        "details": "",
+        "notes": "",
+        "updated": 1444925420030
+    },
+    {
+        "title": "Nineteen Eighty-Four",
+        "entity": "isbn:9781595404329",
+        "transaction": "giving",
+        "listing": "friends",
+        "pictures": [
+            "http://books.google.com/books/content?id=w-rb62wiFAwC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "http://books.google.com/books/content?id=w-rb62wiFAwC&printsec=frontcover&img=1&zoom=2&source=gbs_api"
+        ],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444925398854,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1ed859",
+        "_rev": "2-fbd067d673592e5fe9b8a1d8e04c7cb7",
+        "details": "",
+        "notes": "",
+        "updated": 1444925403216
+    },
+    {
+        "title": "Alice's Adventures in Wonderland",
+        "entity": "isbn:9781406360431",
+        "transaction": "giving",
+        "listing": "friends",
+        "pictures": [
+            "http://books.google.com/books/content?id=PRWhoAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "http://books.google.com/books/content?id=PRWhoAEACAAJ&printsec=frontcover&img=1&zoom=2&source=gbs_api"
+        ],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444925383726,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1ec923",
+        "_rev": "3-3cac4f0dfafa382d79b39ff935619af0",
+        "updated": 1444925389600,
+        "details": "",
+        "notes": ""
+    },
+    {
+        "title": "The Corrections",
+        "entity": "wd:Q335645",
+        "transaction": "lending",
+        "listing": "friends",
+        "pictures": [],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444925323885,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1ebf96",
+        "_rev": "5-fe7d0a547f8ec38fdb9b5e237b6fe656",
+        "updated": 1444925337776,
+        "details": "",
+        "notes": ""
+    },
+    {
+        "title": "Freedom",
+        "entity": "wd:Q724340",
+        "transaction": "inventorying",
+        "listing": "private",
+        "pictures": [],
+        "owner": "bd5f8d1a1fd834c651fc947c7d1eb42c",
+        "created": 1444925293800,
+        "_id": "bd5f8d1a1fd834c651fc947c7d1ebc1f",
+        "_rev": "2-3ecb10b8ee17ffa211850d4c7396ba4d",
+        "details": "",
+        "notes": "",
+        "updated": 1444925301905
+    }
+]
