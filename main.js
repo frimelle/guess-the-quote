@@ -1,13 +1,13 @@
 var content = ( function() {
   var c = {};
 
+  var LIMIT_BOOKS = 5;
   var inventaireData;
-  var correctBook;
 
   function getRandomTitleFromSitelinks( sitelinks ) {
     var keys = Object.keys( sitelinks );
-    correctBook = keys[ Math.floor( keys.length * Math.random() ) ];
-    return sitelinks[ correctBook ];
+    var correctBook = keys[ Math.floor( keys.length * Math.random() ) ];
+    return [ correctBook, sitelinks[ correctBook ] ];
   }
 
   function getEnwikiTitle( data ) {
@@ -19,39 +19,54 @@ var content = ( function() {
         sitelinks[key] = value.sitelinks.enwikiquote.title;
       }
     });
+
     return getRandomTitleFromSitelinks( sitelinks );
   }
 
-  function showBooks( books ) {
+  function showBooks( books, correctBook ) {
     var keys = Object.keys( books );
     keys.sort( function() { return 0.5 - Math.random() } );
+    keys = keys.slice( 0, LIMIT_BOOKS );
 
-    for ( i = 0; i <= 5; i++ ) {
+    if ( !$.inArray( correctBook, keys) ) {
+      keys = keys.slice( 0, LIMIT_BOOKS - 1 );
+      keys.push( correctBook );
+      keys.sort( function() { return 0.5 - Math.random() } );
+    }
+
+    for ( i = 0; i <= keys.length; i++ ) {
       if ( !keys[ i ] ) {
         continue;
       }
 
         title = books[ keys[ i ] ][ 0 ];
         image = books[ keys[ i ] ][ 1 ];
-        $(".books").append(
-          '<div id="book"><h3>' + title + '</h3><img src="' + image + '" alt="no bookcover found" height="200">'
-        );
+        if ( image.length > 0 ) {
+          $(".books").append(
+            '<div id="book"><h3>' + title + '</h3><img src="' + image + '" alt="no bookcover found" height="200">'
+          );
+        } else {
+          $(".books").append(
+            '<div id="book-without-image"><h3>' + title + '</h3>'
+          );
+        }
     }
   }
 
-  function showQuote( books ) {
+  function showContent( entityIds, books ) {
     var title,
         url;
-    if( books.length < 1 || books == undefined ) {
+    if( entityIds.length < 1 || entityIds == undefined ) {
       return null;
     }
 
-    url = "https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&props=sitelinks&ids=" + books.join( '|' );
+    url = "https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&props=sitelinks&ids=" + entityIds.join( '|' );
     $.ajax({
       dataType: "jsonp",
       url: url,
     }).done(function ( data ) {
-      title = getEnwikiTitle( data.entities );
+      correctBook = getEnwikiTitle( data.entities )[0];
+      title = getEnwikiTitle( data.entities )[1];
       if ( title ) {
         quote = WikiquoteApi.getRandomQuote(
           title,
@@ -63,6 +78,7 @@ var content = ( function() {
             alert( msg );
           }
         );
+        showBooks( books, correctBook );
       }
     });
   }
@@ -88,8 +104,8 @@ c.getBooks = function() {
       entityIds.push( entityId.substring( 3 ) );
     }
   });
-  showQuote( entityIds );
-  showBooks( books );
+  showContent( entityIds, books );
+  //showBooks( books );
 }
 
 c.emptyPage = function() {
