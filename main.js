@@ -22,6 +22,23 @@ var content = ( function() {
     return getRandomTitleFromSitelinks( sitelinks );
   }
 
+  function showBooks( books ) {
+    var keys = Object.keys( books );
+    keys.sort( function() { return 0.5 - Math.random() } );
+
+    for ( i = 0; i <= 5; i++ ) {
+      if ( !keys[ i ] ) {
+        continue;
+      }
+
+        title = books[ keys[ i ] ][ 0 ];
+        image = books[ keys[ i ] ][ 1 ];
+        $(".books").append(
+          '<div id="book"><h3>' + title + '</h3><img src="' + image + '" alt="no bookcover found" height="200">'
+        );
+    }
+  }
+
   function showQuote( books ) {
     var title,
         url;
@@ -40,7 +57,6 @@ var content = ( function() {
           title,
           function( quote ) {
             $( ".quote" ).append( "<p>" + quote.quote + "</p>" );
-            console.log( '<a href="https://wikidata.org/wiki/' + correctBook + '">The book</a>' );
             $( ".quote" ).append( '<a href="https://wikidata.org/wiki/' + correctBook + '">The book</a>'  );
           },
           function( msg ) {
@@ -63,8 +79,6 @@ c.getBooks = function() {
   var entityIds = new Array();
   var books = new Array();
   var quote;
-
-  $( ".books" ).append( "<p>This are the books:</p>" );
   //inventaire api call would go here also:
   // @todo: eigene method!
   $.each( inventaireData, function( index, value ) {
@@ -75,11 +89,13 @@ c.getBooks = function() {
     }
   });
   showQuote( entityIds );
-  //showBooks( books );
+  showBooks( books );
 }
 
-
-
+c.emptyPage = function() {
+  $( ".quote" ).empty();
+  $(".books").empty();
+}
 
   return c;
 }());
