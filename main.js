@@ -25,6 +25,7 @@ var content = ( function() {
 
   function showBooks( books, correctBook ) {
     var keys = Object.keys( books ),
+        correctBook = "wd:" + correctBook,
         book;
 
     keys.sort( function() { return 0.5 - Math.random() } );
@@ -32,7 +33,7 @@ var content = ( function() {
 
     if ( $.inArray( correctBook, keys) == -1 ) {
       keys.pop();
-      keys.push( "wd:" + correctBook );
+      keys.push( correctBook );
       keys.sort( function() { return 0.5 - Math.random() } );
     }
 
@@ -40,20 +41,21 @@ var content = ( function() {
       if ( !keys[ i ] ) {
         continue;
       }
-      
-      var title = books[ keys[ i ] ][ 0 ];
-      var image = books[ keys[ i ] ][ 1 ];
-      var imageHtml;
+
+      var title = books[ keys[ i ] ][ 0 ],
+          correctTitle = books[ correctBook ][0],
+          image = books[ keys[ i ] ][ 1 ],
+          imageHtml;
 
       if ( image.length > 0 ) {
         imageHtml = $('<img/>', {
           src   : image,
           alt   : 'Bookcover',
           height: '200',
-          id    : keys[ i ].substring( 3 ),
+          id    : title,
           on    : {
             click : function() {
-              clickOnBook( this.id, correctBook );
+              clickOnBook( this.id, correctTitle );
             }
           }
         });
@@ -63,10 +65,10 @@ var content = ( function() {
           src   : 'https://placekitten.com/g/150/200',
           alt   : 'Bookcover',
           height: '200',
-          id    : keys[ i ].substring( 3 ),
+          id    : title,
           on    : {
             click : function() {
-              clickOnBook( this.id, correctBook );
+              clickOnBook( this.id, correctTitle );
             }
           }
         });
@@ -80,12 +82,11 @@ var content = ( function() {
     }
   }
 
-  clickOnBook = function( entityId, correctBook ) {
-    if ( entityId === correctBook ) {
+  clickOnBook = function( title, correctTitle ) {
+    if ( title === correctTitle ) {
       alert("you won!");
-      c.init();
+      c.emptyPage();
     }
-    alert( entityId + " --> " + correctBook );
   }
 
   function showContent( entityIds, books ) {
