@@ -77,10 +77,13 @@ var content = ( function() {
       }
 
       book = $( '<div class="col-sm-4 book"></div>' );
-      var titleHtml = $( '<h3>' + title + '</h3>' );
+      var titleHtml = $( '<h3>' + title + '</h3>' ),
+          ahref = $('<a href="#" class="thumbnail well ahref"></a>');
+
+      ahref.append( titleHtml );
+      ahref.append( imageHtml );
+      book.append( ahref );
       $('.books').append( book );
-      book.append( titleHtml );
-      book.append( imageHtml );
     }
   }
 
