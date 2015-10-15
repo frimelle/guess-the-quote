@@ -53,12 +53,7 @@ var content = ( function() {
           alt   : 'Bookcover',
           height: '200',
           class: 'img-rounded img-thumbnail',
-          id    : title,
-          on    : {
-            click : function() {
-              clickOnBook( this.id, correctTitle );
-            }
-          }
+          id    : title
         });
 
       } else {
@@ -67,16 +62,19 @@ var content = ( function() {
           alt   : 'Bookcover',
           height: '200',
           class: 'img-rounded img-thumbnail',
-          id    : title,
-          on    : {
-            click : function() {
-              clickOnBook( this.id, correctTitle );
-            }
-          }
+          id    : title
         });
       }
 
-      book = $( '<div class="col-sm-4 book"></div>' );
+      book = $( '<div/>', {
+        class: "col-sm-4 book",
+        id   : title,
+        on    : {
+          click : function() {
+            clickOnBook( this.id, correctTitle );
+          }
+        }
+      });
       var titleHtml = $( '<h3>' + title + '</h3>' ),
           ahref = $('<a href="#" class="thumbnail well ahref"></a>');
 
