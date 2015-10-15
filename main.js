@@ -89,7 +89,7 @@ var content = ( function() {
     if ( title === correctTitle ) {
       $('.alert').removeClass( 'alert-danger' ).addClass( 'alert-success' );
       $('.alert').append(
-        '<Strong> You won! </Strong> It was really ' + title + '! You really guessed that quote! Who would have guessed!?'
+        '<Strong> You won! </Strong> It was really <Strong>' + title + '</Strong>! You really guessed that quote! Who would have guessed!?'
       );
       c.emptyPage();
     } else {
