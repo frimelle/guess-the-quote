@@ -18,7 +18,17 @@
   <!-- später können hier mehrere functions hin: <body onload="content.init(); alarm.init();"> -->
   <body onload="content.init()">
     <div class="container">
-      <h1> Guess the Quote </h1>
+      <div class="jumbotron">
+        <h1> Guess the Quote </h1>
+        <p>
+          A small game powered by the magic of
+          <a href="http://inventaire.io">inventaire.io</a>,
+          <a href="https://wikidata.org">Wikidata</a>
+          and
+          <a href="en.wikiquote.org">Wikiquote</a>
+        </p>
+      </div>
+      <div class="alert"></div>
       <input type="button" class="btn btn-default" onclick="content.emptyPage(); content.getBooks()" value="Start"/>
       <br/><br/>
       <div class="quote"></div>

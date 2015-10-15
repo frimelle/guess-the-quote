@@ -52,6 +52,7 @@ var content = ( function() {
           src   : image,
           alt   : 'Bookcover',
           height: '200',
+          class: 'img-rounded img-thumbnail',
           id    : title,
           on    : {
             click : function() {
@@ -65,6 +66,7 @@ var content = ( function() {
           src   : 'https://placekitten.com/g/150/200',
           alt   : 'Bookcover',
           height: '200',
+          class: 'img-rounded img-thumbnail',
           id    : title,
           on    : {
             click : function() {
@@ -83,9 +85,14 @@ var content = ( function() {
   }
 
   clickOnBook = function( title, correctTitle ) {
+    $('.alert').empty();
     if ( title === correctTitle ) {
-      alert("you won!");
+      $('.alert').removeClass( 'alert-danger' ).addClass( 'alert-success' );
+      $('.alert').append( '<Strong> You won! </Strong> You really guessed tha quote! Who would have guessed!?' );
       c.emptyPage();
+    } else {
+        $('.alert').removeClass( 'alert-success' ).addClass( 'alert-danger' );
+        $('.alert').append( '<Strong> Wrong answer! </Strong> Just try again!' );
     }
   }
 
