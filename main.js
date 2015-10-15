@@ -89,14 +89,12 @@ var content = ( function() {
     $( '.alert' ).empty();
     if ( title === correctTitle ) {
       $( '.alert' ).removeClass( 'alert-danger' ).addClass( 'alert-success' );
-      $( '.alert' ).append('<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>');
       $( '.alert' ).append(
         '<Strong> You won! </Strong> It was really <Strong>' + title + '</Strong>! You really guessed that quote! Who would have guessed!?'
       );
       c.emptyPage();
     } else {
         $('.alert').removeClass( 'alert-success' ).addClass( 'alert-danger' );
-        $( '.alert' ).append('<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>');
         $('.alert').append( '<Strong> Wrong answer! </Strong> Just try again!' );
     }
   }
