@@ -3,7 +3,6 @@ var content = ( function() {
 
   var inventaireData;
   var correctBook;
-  var quote;
 
   function getRandomTitleFromSitelinks( sitelinks ) {
     var keys = Object.keys( sitelinks );
@@ -23,27 +22,9 @@ var content = ( function() {
     return getRandomTitleFromSitelinks( sitelinks );
   }
 
-  function parsePage( text ) {
-
-  }
-
-  function getRandomQuote( text ) {
-
-  }
-
-  function setQuote( title ) {
-    var url = "https://en.wikiquote.org/w/api.php?action=parse&prop=text&page=" + title + "&format=json&disabletoc=true";
-    $.ajax({
-      dataType: "jsonp",
-      url: url,
-    }).done(function ( data ) {
-      getRandomQuote( data.parse.text['*'] );
-    });
-  }
-
   function showQuote( books ) {
-    var title;
-    var url;
+    var title,
+        url;
     if( books.length < 1 || books == undefined ) {
       return null;
     }
@@ -55,10 +36,19 @@ var content = ( function() {
     }).done(function ( data ) {
       title = getEnwikiTitle( data.entities );
       if ( title ) {
-        setQuote( title );
+        quote = WikiquoteApi.getRandomQuote(
+          title,
+          function( quote ) {
+            $( ".quote" ).append( "<p>" + quote.quote + "</p>" );
+            console.log( '<a href="https://wikidata.org/wiki/' + correctBook + '">The book</a>' );
+            $( ".quote" ).append( '<a href="https://wikidata.org/wiki/' + correctBook + '">The book</a>'  );
+          },
+          function( msg ) {
+            alert( msg );
+          }
+        );
       }
     });
-    //$( ".quote" ).append( "<p>" quote "</p>" );
   }
 
   c.init = function() {

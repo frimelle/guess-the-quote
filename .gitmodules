@@ -1,0 +1,3 @@
+[submodule "wikiquotes-api"]
+	path = wikiquotes-api
+	url = https://github.com/natetyler/wikiquotes-api
