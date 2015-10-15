@@ -43,11 +43,11 @@ var content = ( function() {
         image = books[ keys[ i ] ][ 1 ];
         if ( image.length > 0 ) {
           $(".books").append(
-            '<div id="book"><h3>' + title + '</h3><img src="' + image + '" alt="no bookcover found" height="200">'
+            '<div class="col-sm-4 book"><h3>' + title + '</h3><img src="' + image + '" alt="no bookcover found" height="200"></div>'
           );
         } else {
           $(".books").append(
-            '<div id="book-without-image"><h3>' + title + '</h3>'
+            '<div class="col-sm-4 book-without-image"><h3>' + title + '</h3></div>'
           );
         }
     }
@@ -71,7 +71,7 @@ var content = ( function() {
         quote = WikiquoteApi.getRandomQuote(
           title,
           function( quote ) {
-            $( ".quote" ).append( "<p>" + quote.quote + "</p>" );
+            $( ".quote" ).append( "<blockquote>" + quote.quote + "</blockquote>" );
             $( ".quote" ).append( '<a href="https://wikidata.org/wiki/' + correctBook + '">The book</a>'  );
           },
           function( msg ) {
