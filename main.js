@@ -101,7 +101,8 @@ var content = ( function() {
 
   function showContent( entityIds, books ) {
     var title,
-        url;
+        url,
+        enwikiTitle;
     if( entityIds.length < 1 || entityIds == undefined ) {
       return null;
     }
@@ -111,8 +112,9 @@ var content = ( function() {
       dataType: "jsonp",
       url: url,
     }).done(function ( data ) {
-      correctBook = getEnwikiTitle( data.entities )[0];
-      title = getEnwikiTitle( data.entities )[1];
+      enwikiTitle = getEnwikiTitle( data.entities );
+      correctBook = enwikiTitle[0];
+      title = enwikiTitle[1];
       if ( title ) {
         quote = WikiquoteApi.getRandomQuote(
           title,
